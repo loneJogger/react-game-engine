@@ -1,8 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
-import Login from '../components/Login'
-
 const Home = () => {
 
   return (
@@ -10,7 +8,7 @@ const Home = () => {
       <Row>
         <Col xs={1} md={3}></Col>
         <Col xs={10} md={6}>
-          <Login />
+          <p>Home...</p>
         </Col>
         <Col xs={1} md={3}></Col>
       </Row>
