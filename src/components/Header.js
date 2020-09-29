@@ -6,12 +6,12 @@ const Header = (props) => {
 
   return (
     <HeaderBox>
-      <h1>Header</h1>
+      <h1>Game Name</h1>
       <NavBar>
         <NavBarLinks>
-          <Link style={navLink} to='#'>Link 1</Link>
-          <Link style={navLink} to='#'>Link 2</Link>
-          <Link style={navLink} to='#'>Link 3</Link>
+          <Link style={navLink} to='/'>Home</Link>
+          <Link style={navLink} to='/game'>Game</Link>
+          <Link style={navLink} to='/test'>Test</Link>
         </NavBarLinks>
         <NavBarLinks>
           {props.isUser ? (
