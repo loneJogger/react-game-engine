@@ -1,29 +1,28 @@
-import React, { useState } from 'react'
-import { Canvas } from 'react-three-fiber'
+import React from 'react'
 import styled from 'styled-components'
+
+import Canvas from './Canvas'
+
+import useInterval from './useInterval'
+import useKeyDown from './useKeyDown'
 
 const Game = props => {
 
-  const [ paused, setPaused ] = useState(false)
+  //game loop
+  useInterval(() => {
+    //update gameState
+    //render canvas
+  }, 17)
 
-  const cameraZoom = 64
+  //setup keyboard
+  const leftPress = useKeyDown('a')
+  const rightPress = useKeyDown('d')
+  const gasPress = useKeyDown('l')
+  const breakPress = useKeyDown('k')
 
   return (
     <GameBox>
-      <Canvas
-        camera={{
-          position: [0, 0, 32],
-          zoom: cameraZoom,
-          near: 0.1,
-          far: 64,
-        }}
-        orthographic
-        noEvents
-        gl2
-        gl={{ antialias: false }}
-        onContextMenu={e => e.preventDefault()}
-      >
-      </Canvas>
+      <Canvas />
     </GameBox>
   )
 
