@@ -5,8 +5,8 @@ const Canvas = props => {
 
   const WIDTH = '768'
   const HEIGHT = '512'
-  const CARX = 384
-  const CARY = 464
+  const CARX = 336
+  const CARY = 432
 
   const canvasRef = useRef(null)
 
@@ -28,9 +28,9 @@ const Canvas = props => {
 
     //draw car
     if (props.isLeft) {
-      ctx.drawImage(props.sprites[2], CARX, CARY)
+      ctx.drawImage(props.sprites[4], CARX, CARY)
     } else if (props.isRight) {
-      ctx.drawImage(props.sprites[3], CARX, CARY)
+      ctx.drawImage(props.sprites[8], CARX - 22, CARY)
     } else {
       ctx.drawImage(props.sprites[0], CARX, CARY)
     }

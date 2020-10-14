@@ -12,10 +12,16 @@ const Game = props => {
   //load sprites
   const [ sprites, setSprites ] = useState([])
   const images = useSpriteLoader([
-    '/images/car1.png',
-    '/images/car2.png',
-    '/images/car3.png',
-    '/images/car4.png'
+    '/images/neutralCar1.png',
+    '/images/neutralCar2.png',
+    '/images/slightLeftCar1.png',
+    '/images/slightLeftCar2.png',
+    '/images/fullLeftCar1.png',
+    '/images/fullLeftCar2.png',
+    '/images/slightRightCar1.png',
+    '/images/slightRightCar2.png',
+    '/images/fullRightCar1.png',
+    '/images/fullRightCar2.png'
   ])
   useEffect(() => {
     setSprites(images)
