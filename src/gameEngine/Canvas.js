@@ -6,7 +6,7 @@ const Canvas = props => {
   const WIDTH = '768'
   const HEIGHT = '512'
   const CARX = 336
-  const CARY = 432
+  const CARY = 416
 
   const canvasRef = useRef(null)
 
@@ -16,6 +16,7 @@ const Canvas = props => {
     if (props.sprites.length > 0) {
       draw(context, canvas)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props])
 
   const draw = (ctx, canvas) => {

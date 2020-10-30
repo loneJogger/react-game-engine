@@ -23,6 +23,7 @@ const useKeyDown = (targetKey) => {
       window.removeEventListener('keydown', downHandler)
       window.removeEventListener('keyup', upHandler)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return keyDown

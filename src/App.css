@@ -24,3 +24,26 @@ a {
 a:hover {
   color: #86284f;
 }
+
+.menuSlide-enter {
+  transform: translateX(-100vw);
+  opacity: 0;
+  position: absolute;
+}
+
+.menuSlide-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms linear 300ms;
+}
+
+.menuSlide-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.menuSlide-exit-active {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: all 300ms linear;
+}

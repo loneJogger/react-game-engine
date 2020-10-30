@@ -25,6 +25,7 @@ const Game = props => {
   ])
   useEffect(() => {
     setSprites(images)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   //setup keyboard

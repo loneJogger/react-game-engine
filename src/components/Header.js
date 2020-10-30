@@ -12,6 +12,7 @@ const Header = (props) => {
           <Link style={navLink} to='/'>Home</Link>
           <Link style={navLink} to='/game'>Game</Link>
           <Link style={navLink} to='/test'>Test</Link>
+          <Link style={navLink} to='/style'>Style Test</Link>
         </NavBarLinks>
         <NavBarLinks>
           {props.isUser ? (
