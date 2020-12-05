@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import GamePage from './pages/GamePage'
 
 import Hamburger from './components/Hamburger'
+import Starfield from './components/Starfield'
 
 const App = () => {
 
@@ -23,8 +24,9 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={props => (
           <div>
-          <Hamburger options={options}/>
+          <Starfield />
           <Home />
+          <Hamburger options={options}/>
           </div>
         )} />
         <Route exact path='/racer' render={props => (

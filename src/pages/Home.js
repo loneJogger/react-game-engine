@@ -1,17 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import useWindowResize from '../gameEngine/useWindowResize'
 
 const Home = () => {
 
+  const size = useWindowResize()
+
+  const homeBox = {
+    padding: '64px',
+    margin: '64px',
+    zIndex: '2',
+    position: 'absolute',
+    top: '0',
+    border: '1px solid #eab4d5',
+    width: `${size.width - 256}px`,
+    height: `${size.height - 256}px`
+  }
+
   return (
-    <Wrapper>
-      Home...
-    </Wrapper>
+    <div style={homeBox}>
+      <p>Home...</p>
+    </div>
   )
 }
-
-const Wrapper = styled.div`
-  margin: 64px;
-`
 
 export default Home

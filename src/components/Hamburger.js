@@ -32,9 +32,9 @@ const Menu = props => {
 
   const generateOptions = options => {
     if (options) {
-      const list = options.map(option => {
+      const list = options.map((option,index) => {
         return (
-          <LinkBox>
+          <LinkBox key={index}>
             <Link to={option.url} onClick={props.toggleOpen}>{option.text}</Link>
           </LinkBox>
         )
@@ -75,7 +75,7 @@ const Menu = props => {
 const Wrapper = styled.div`
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 `
 
 const MenuBox = styled.div`
