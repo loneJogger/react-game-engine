@@ -4,13 +4,17 @@ import './App.css'
 
 import Home from './pages/Home'
 import GamePage from './pages/GamePage'
-import Test from './pages/Test'
-import StyleTest from './pages/StyleTest'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Hamburger from './components/Hamburger'
 
 const App = () => {
+
+  const options = [
+    { text: 'Home', url: '/' },
+    { text: 'Raster Racer', url: '/racer' },
+    { text: 'link 3', url: '/' },
+    { text: 'link 4', url: '/' }
+  ]
 
   return (
     <div className='App'>
@@ -18,28 +22,16 @@ const App = () => {
 
       <Switch>
         <Route exact path='/' render={props => (
-          <>
-          <Header />
+          <div>
+          <Hamburger options={options}/>
           <Home />
-          <Footer />
-          </>
+          </div>
         )} />
-        <Route exact path='/game' render={props => (
-          <>
-          <Header />
+        <Route exact path='/racer' render={props => (
+          <div>
+          <Hamburger options={options}/>
           <GamePage />
-          <Footer />
-          </>
-        )} />
-        <Route exact path='/test' render={props => (
-          <>
-          <Header />
-          <Test />
-          <Footer />
-          </>
-        )} />
-        <Route exact path='/style' render={props => (
-          <StyleTest />
+          </div>
         )} />
       </Switch>
     </Router>

@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const Canvas = props => {
 
-  const WIDTH = '768'
-  const HEIGHT = '512'
-  const CARX = 336
-  const CARY = 416
+  const WIDTH =  window.innerWidth
+  const HEIGHT =  window.innerHeight
+  const CARX = window.innerWidth/2 - 48
+  const CARY = window.innerHeight - 96
 
   const canvasRef = useRef(null)
 
@@ -24,7 +24,7 @@ const Canvas = props => {
     ctx.clearRect(0,0, canvas.width, canvas.height)
 
     //draw background
-    ctx.fillStyle = 'rgb(0,0,200,0.5)'
+    ctx.fillStyle = 'rgba(134, 40, 79, 0.10)'
     ctx.fillRect(0,0, canvas.width, canvas.height)
 
     //draw car

@@ -25,25 +25,36 @@ a:hover {
   color: #86284f;
 }
 
-.menuSlide-enter {
+.menuSlide-entering {
   transform: translateX(-100vw);
   opacity: 0;
   position: absolute;
+  top: 0;
+  z-index: 3;
 }
 
-.menuSlide-enter-active {
+.menuSlide-entered {
   transform: translateX(0);
   opacity: 1;
   transition: all 300ms linear 300ms;
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
 
-.menuSlide-exit {
+.menuSlide-exiting {
   transform: translateX(0);
   opacity: 1;
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
 
-.menuSlide-exit-active {
-  transform: translateX(100vw);
+.menuSlide-exited {
+  transform: translateX(-100vw);
   opacity: 0;
   transition: all 300ms linear;
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
