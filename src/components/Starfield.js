@@ -6,6 +6,7 @@ const Starfield = () => {
 
   const WIDTH =  window.innerWidth
   const HEIGHT =  window.innerHeight
+  const SPEED = 3
 
   const [ stars, setStars ] = useState([])
 
@@ -24,7 +25,7 @@ const Starfield = () => {
   }, [stars])
 
   useInterval(() => {
-    updateStars(2)
+    updateStars(SPEED)
   }, 33)
 
   const createStars = (amount) => {
@@ -51,7 +52,6 @@ const Starfield = () => {
       }
       newStars.push(newStar)
     })
-    console.log(newStars)
     setStars(newStars)
   }
 

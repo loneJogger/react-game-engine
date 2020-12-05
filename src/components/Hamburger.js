@@ -16,7 +16,7 @@ const Hamburger = props => {
       <svg
         viewBox="0 0 100 80"
         width="40" height="40"
-        style={{ margin: '12px', cursor: 'pointer'}}
+        style={{ margin: '16px', cursor: 'pointer'}}
         onClick={toggleOpen}
       >
         <rect width="100" height="15" fill='#eab4d5'></rect>
@@ -46,7 +46,7 @@ const Menu = props => {
   }
 
   return (
-    <Transition in={props.isOpen} timeout={500}>
+    <Transition in={props.isOpen} timeout={0}>
       {state => (
         <div
           className={`menuSlide-${state}`}

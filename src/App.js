@@ -4,6 +4,7 @@ import './App.css'
 
 import Home from './pages/Home'
 import GamePage from './pages/GamePage'
+import Action from './pages/Action'
 
 import Hamburger from './components/Hamburger'
 import Starfield from './components/Starfield'
@@ -12,8 +13,8 @@ const App = () => {
 
   const options = [
     { text: 'Home', url: '/' },
-    { text: 'Raster Racer', url: '/racer' },
-    { text: 'link 3', url: '/' },
+    { text: 'Racer', url: '/racer' },
+    { text: 'Action', url: '/action' },
     { text: 'link 4', url: '/' }
   ]
 
@@ -24,15 +25,22 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={props => (
           <div>
-          <Starfield />
-          <Home />
-          <Hamburger options={options}/>
+            <Starfield />
+            <Home />
+            <Hamburger options={options}/>
           </div>
         )} />
         <Route exact path='/racer' render={props => (
           <div>
-          <Hamburger options={options}/>
-          <GamePage />
+            <Hamburger options={options}/>
+            <GamePage />
+          </div>
+        )} />
+        <Route exact path='/action' render={props => (
+          <div>
+            <Starfield />
+            <Action />
+            <Hamburger options={options}/>
           </div>
         )} />
       </Switch>
