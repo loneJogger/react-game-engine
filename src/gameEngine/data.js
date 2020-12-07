@@ -6,6 +6,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 1,
@@ -13,6 +14,7 @@ module.exports = {
       northWall: false,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 2,
@@ -20,6 +22,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 3,
@@ -27,6 +30,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 4,
@@ -34,6 +38,7 @@ module.exports = {
       northWall: true,
       eastWall: false,
       southWall: true,
+      objects: []
     },
     {
       id: 5,
@@ -41,6 +46,7 @@ module.exports = {
       northWall: false,
       eastWall: false,
       southWall: false,
+      objects: [ 0 ]
     },
     {
       id: 6,
@@ -48,6 +54,7 @@ module.exports = {
       northWall: true,
       eastWall: false,
       southWall: true,
+      objects: []
     },
     {
       id: 7,
@@ -55,6 +62,7 @@ module.exports = {
       northWall: false,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 8,
@@ -62,6 +70,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 9,
@@ -69,6 +78,7 @@ module.exports = {
       northWall: false,
       eastWall: true,
       southWall: false,
+      objects: []
     },
     {
       id: 10,
@@ -76,6 +86,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 11,
@@ -83,6 +94,7 @@ module.exports = {
       northWall: false,
       eastWall: true,
       southWall: false,
+      objects: []
     },
     {
       id: 12,
@@ -90,6 +102,7 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: true,
+      objects: []
     },
     {
       id: 13,
@@ -97,6 +110,7 @@ module.exports = {
       northWall: true,
       eastWall: false,
       southWall: false,
+      objects: []
     },
     {
       id: 14,
@@ -104,6 +118,7 @@ module.exports = {
       northWall: true,
       eastWall: false,
       southWall: true,
+      objects: []
     },
     {
       id: 15,
@@ -111,6 +126,16 @@ module.exports = {
       northWall: true,
       eastWall: true,
       southWall: false,
+      objects: []
+    }
+  ],
+  objects: [
+    {
+      id: 0,
+      sprite: 8,
+      x: 100,
+      y: 100,
+      text: 'Hello welcome to PodSpace!'
     }
   ]
 }
