@@ -1,18 +1,24 @@
-import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import useWindowResize from '../hooks/useWindowResize'
 
 const Home = () => {
 
+  const size = useWindowResize()
+
+  const homeBox = {
+    padding: '64px',
+    margin: '64px',
+    zIndex: '2',
+    position: 'absolute',
+    top: '0',
+    border: '1px solid #eab4d5',
+    width: `${size.width - 256}px`,
+    height: `${size.height - 256}px`
+  }
+
   return (
-    <Container>
-      <Row>
-        <Col xs={1} md={3}></Col>
-        <Col xs={10} md={6}>
-          <p>Home...</p>
-        </Col>
-        <Col xs={1} md={3}></Col>
-      </Row>
-    </Container>
+    <div style={homeBox}>
+      <p>Home...</p>
+    </div>
   )
 }
 

@@ -3,29 +3,39 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
-import GamePage from './pages/GamePage'
-import Test from './pages/Test'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import StyleTest from './pages/StyleTest'
+
+import Hamburger from './components/Hamburger'
+import Starfield from './components/Starfield'
 
 const App = () => {
+
+  const options = [
+    { text: 'Home', url: '/' },
+    { text: 'Style', url: '/style' },
+    { text: 'link 3', url: '/' },
+    { text: 'link 4', url: '/' }
+  ]
 
   return (
     <div className='App'>
     <Router>
-      <Header />
+
+      {/* universal elements */}
+      <Starfield />
+      <Hamburger options={options}/>
+
+      {/* content window */}
+
       <Switch>
         <Route exact path='/' render={props => (
           <Home />
         )} />
-        <Route exact path='/game' render={props => (
-          <GamePage />
-        )} />
-        <Route exact path='/test' render={props => (
-          <Test />
+        <Route exact path='/style' render={props => (
+          <StyleTest />
         )} />
       </Switch>
-      <Footer />
+
     </Router>
   </div>
   )
