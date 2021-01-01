@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Transition } from 'react-transition-group'
 import styled from 'styled-components'
 import useWindowResize from '../hooks/useWindowResize'
 
@@ -9,7 +10,6 @@ const Modal = props => {
 
   const WIDTH =  size.width
   const HEIGHT =  size.height
-  const MODAL_MAX_WIDTH = 512
   const MODAL_WIDTH = (size.width - 128) * .66
   const LINE_SPACE = 3
   const LINE_HEIGHT = 1
@@ -49,7 +49,6 @@ const Modal = props => {
   }
 
   const Wrapper = styled.div`
-    display: ${ props => props.visible ? 'block' : 'none' };
     position: absolute;
     top: 0;
     left: 0;
@@ -71,16 +70,21 @@ const Modal = props => {
   `
 
   return (
-    <Wrapper visible={props.isModal}>
-      <canvas
-        ref={canvasRef}
-        width={WIDTH - 128}
-        height={HEIGHT - 128}
-      />
-      <ModalBox>
-        {props.children}
-      </ModalBox>
-    </Wrapper>
+    <Transition in={props.isModal} timeout={0}>
+      {state => (
+        <Wrapper visible={props.isModal} className={`modalAppear-${state}`}>
+          <canvas
+            ref={canvasRef}
+            width={WIDTH - 128}
+            height={HEIGHT - 128}
+          />
+          <ModalBox className={`modalBoxAppear-${state}`}>
+            {props.children}
+          </ModalBox>
+        </Wrapper>
+      )}
+    </Transition>
+
   )
 
 }
