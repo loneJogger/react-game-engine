@@ -1,4 +1,4 @@
-import useWindowResize from '../gameEngine/useWindowResize'
+import useWindowResize from '../hooks/useWindowResize'
 
 const Home = () => {
 

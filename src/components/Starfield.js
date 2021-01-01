@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import useInterval from '../gameEngine/useInterval'
+import useInterval from '../hooks/useInterval'
+import useWindowResize from '../hooks/useWindowResize'
 
 const Starfield = () => {
 
-  const WIDTH =  window.innerWidth
-  const HEIGHT =  window.innerHeight
+  const size = useWindowResize()
+
+  const WIDTH =  size.width
+  const HEIGHT =  size.height
   const SPEED = 3
 
   const [ stars, setStars ] = useState([])
@@ -78,8 +81,8 @@ const Starfield = () => {
     <Wrapper>
       <canvas
         ref={canvasRef}
-        width={WIDTH}
-        height={HEIGHT}
+        width={WIDTH - 8}
+        height={HEIGHT - 8}
       />
     </Wrapper>
   )

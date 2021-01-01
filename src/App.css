@@ -1,7 +1,3 @@
-.App {
-
-}
-
 body {
   height: 100%;
   margin: 0;
@@ -11,11 +7,6 @@ body {
   font-family: 'Courier';
 }
 
-h1 {
-  color: #110307;
-  font-weight: bolder;
-}
-
 a {
   color: #110307;
   text-decoration: none;
@@ -23,6 +14,11 @@ a {
 
 a:hover {
   color: #86284f;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #110307;
 }
 
 .menuSlide-entering {

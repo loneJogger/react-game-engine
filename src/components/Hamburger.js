@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import styled from 'styled-components'
@@ -75,7 +75,7 @@ const Menu = props => {
 const Wrapper = styled.div`
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 `
 
 const MenuBox = styled.div`

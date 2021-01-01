@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
-import GamePage from './pages/GamePage'
-import Action from './pages/Action'
+import StyleTest from './pages/StyleTest'
 
 import Hamburger from './components/Hamburger'
 import Starfield from './components/Starfield'
@@ -13,8 +12,8 @@ const App = () => {
 
   const options = [
     { text: 'Home', url: '/' },
-    { text: 'Racer', url: '/racer' },
-    { text: 'Action', url: '/action' },
+    { text: 'Style', url: '/style' },
+    { text: 'link 3', url: '/' },
     { text: 'link 4', url: '/' }
   ]
 
@@ -22,28 +21,21 @@ const App = () => {
     <div className='App'>
     <Router>
 
+      {/* universal elements */}
+      <Starfield />
+      <Hamburger options={options}/>
+
+      {/* content window */}
+
       <Switch>
         <Route exact path='/' render={props => (
-          <div>
-            <Starfield />
-            <Home />
-            <Hamburger options={options}/>
-          </div>
+          <Home />
         )} />
-        <Route exact path='/racer' render={props => (
-          <div>
-            <Hamburger options={options}/>
-            <GamePage />
-          </div>
-        )} />
-        <Route exact path='/action' render={props => (
-          <div>
-            <Starfield />
-            <Action />
-            <Hamburger options={options}/>
-          </div>
+        <Route exact path='/style' render={props => (
+          <StyleTest />
         )} />
       </Switch>
+
     </Router>
   </div>
   )
